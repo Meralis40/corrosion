@@ -90,7 +90,7 @@ function(_generator_add_package_targets)
         endforeach()
 
         if(TARGET "${target_name}"
-            AND ("staticlib" IN_LIST kinds OR "cdylib" IN_LIST kinds OR "bin" IN_LIST kinds or "dylib" IN_LIST kinds)
+            AND ("staticlib" IN_LIST kinds OR "cdylib" IN_LIST kinds OR "bin" IN_LIST kinds OR "dylib" IN_LIST kinds)
             )
             message(WARNING "Failed to import Rust crate ${target_name} (kind: `${target_kind}`) because a target "
                 "with the same name already exists. Skipping this target.\n"
